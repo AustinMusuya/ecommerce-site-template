@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './styles.sass';
+import "./styles.sass";
 
 class OtherInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
       locationEditing: false,
-      contactEditing: false
+      contactEditing: false,
     };
   }
 
@@ -17,7 +17,12 @@ class OtherInfo extends Component {
         <div className="lIWrapper" key="lIWrapper">
           <div className="inputWrapper">
             <label htmlFor="localAddress">Local Address:</label>
-            <input id="localAddress" className="localAddress" type="text" placeholder="Local Address" />
+            <input
+              id="localAddress"
+              className="localAddress"
+              type="text"
+              placeholder="Local Address"
+            />
           </div>
           <div className="inputWrapper">
             <label htmlFor="city">City:</label>
@@ -25,19 +30,39 @@ class OtherInfo extends Component {
           </div>
           <div className="inputWrapper">
             <label htmlFor="state">State:</label>
-            <input id="state" className="state" type="text" placeholder="State" />
+            <input
+              id="state"
+              className="state"
+              type="text"
+              placeholder="State"
+            />
           </div>
           <div className="inputWrapper">
             <label htmlFor="landmark">Landmark:</label>
-            <input id="landmark" className="landmark" type="text" placeholder="Landmark" />
+            <input
+              id="landmark"
+              className="landmark"
+              type="text"
+              placeholder="Landmark"
+            />
           </div>
           <div className="inputWrapper">
             <label htmlFor="country">Country:</label>
-            <input id="country" className="country" type="text" placeholder="Country" />
+            <input
+              id="country"
+              className="country"
+              type="text"
+              placeholder="Country"
+            />
           </div>
           <div className="inputWrapper">
             <label htmlFor="pincode">Pin Code:</label>
-            <input id="pincode" className="pinCode" type="text" placeholder="Pin Code" />
+            <input
+              id="pincode"
+              className="pinCode"
+              type="text"
+              placeholder="Pin Code"
+            />
           </div>
         </div>
       );
@@ -79,11 +104,21 @@ class OtherInfo extends Component {
         <div className="cIWrapper" key="cIWrapper">
           <div className="inputWrapper">
             <label htmlFor="email">Email:</label>
-            <input id="email" className="email" type="email" placeholder="Email" />
+            <input
+              id="email"
+              className="email"
+              type="email"
+              placeholder="Email"
+            />
           </div>
           <div className="inputWrapper">
             <label htmlFor="phone">Phone no:</label>
-            <input id="phone" className="phone" type="tel" placeholder="Phone No" />
+            <input
+              id="phone"
+              className="phone"
+              type="tel"
+              placeholder="Phone No"
+            />
           </div>
         </div>
       );
@@ -104,63 +139,75 @@ class OtherInfo extends Component {
   }
 
   getButtons(info) {
-    if (!this.state.locationEditing && info === 'LOCATION') {
+    if (!this.state.locationEditing && info === "LOCATION") {
       return (
-        <button className="marB20"
+        <button
+          className="marB20"
           onClick={() => {
             this.setState({ locationEditing: true });
-          }}>
+          }}
+        >
           Edit
         </button>
       );
-    } else if (!this.state.contactEditing && info === 'CONTACT') {
+    } else if (!this.state.contactEditing && info === "CONTACT") {
       return (
-        <button className="marB20"
+        <button
+          className="marB20"
           onClick={() => {
             this.setState({ contactEditing: true });
-          }}>
+          }}
+        >
           Edit
         </button>
       );
     } else {
       let buttons;
       switch (info) {
-        case 'LOCATION':
-          buttons = ([
-            <button className="marB20"
+        case "LOCATION":
+          buttons = [
+            <button
+              className="marB20"
               key="lSave"
               onClick={() => {
                 this.setState({ locationEditing: false });
-              }}>
+              }}
+            >
               Save
             </button>,
-            <button className="marB20 cancelBtn"
+            <button
+              className="marB20 cancelBtn"
               key="lCancel"
               onClick={() => {
                 this.setState({ locationEditing: false });
-              }}>
+              }}
+            >
               Cancel
-            </button>
-          ]);
+            </button>,
+          ];
 
           break;
-        case 'CONTACT':
-          buttons = ([
-            <button className="marB20"
+        case "CONTACT":
+          buttons = [
+            <button
+              className="marB20"
               key="cSave"
               onClick={() => {
                 this.setState({ contactEditing: false });
-              }}>
+              }}
+            >
               Save
             </button>,
-            <button className="marB20 cancelBtn"
+            <button
+              className="marB20 cancelBtn"
               key="cCancel"
               onClick={() => {
                 this.setState({ contactEditing: false });
-              }}>
+              }}
+            >
               Cancel
-            </button>
-          ]);
+            </button>,
+          ];
           break;
       }
       return buttons;
@@ -173,16 +220,16 @@ class OtherInfo extends Component {
         <div className="locationInfo">
           <div className="heading">
             <h3 className="normal marB20">Location Info</h3>
-            {this.getButtons('LOCATION')}
+            {this.getButtons("LOCATION")}
           </div>
-            {this.getLocationData()}
+          {this.getLocationData()}
         </div>
         <div className="contactInfo">
           <div className="heading">
             <h3 className="normal marB20">Contact Info</h3>
-            {this.getButtons('CONTACT')}
+            {this.getButtons("CONTACT")}
           </div>
-            {this.getContactData()}
+          {this.getContactData()}
         </div>
       </div>
     );

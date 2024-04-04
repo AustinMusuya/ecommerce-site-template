@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const Item = new Schema({
@@ -18,10 +18,10 @@ const Item = new Schema({
     state: String,
     landmark: String,
     street: String,
-    pinCode: String
+    pinCode: String,
   },
   tradeQueries: Array,
-  bought: Boolean
+  bought: Boolean,
 });
 
-module.exports = mongoose.model('Item', Item);
+module.exports = mongoose.model("Item", Item);

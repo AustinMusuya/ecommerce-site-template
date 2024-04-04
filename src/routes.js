@@ -1,14 +1,14 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import React from "react";
+import { Route, IndexRoute } from "react-router";
 
-import App from './components/App/index';
-import Main from './components/Main/index';
-import Profile from './components/Profile/index';
-import Login from './components/Login/index';
-import Trades from './components/Trades/index';
-import ItemPage from './components/ItemPage/index';
-import MyItems from './components/MyItems/index';
-import ErrorPage from './components/ErrorPage/index';
+import App from "./components/App/index";
+import Main from "./components/Main/index";
+import Profile from "./components/Profile/index";
+import Login from "./components/Login/index";
+import Trades from "./components/Trades/index";
+import ItemPage from "./components/ItemPage/index";
+import MyItems from "./components/MyItems/index";
+import ErrorPage from "./components/ErrorPage/index";
 
 export default (
   <Route path="/" component={App}>

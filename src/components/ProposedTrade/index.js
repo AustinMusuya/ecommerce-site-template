@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import './styles.sass';
+import React, { Component } from "react";
+import { Link } from "react-router";
+import "./styles.sass";
 
 class ProposedTrade extends Component {
   render() {
@@ -9,7 +9,8 @@ class ProposedTrade extends Component {
         <div className="upper">
           <div className="userImg" />
           <h4>
-            You have proposed <Link>Arshad Khan</Link> for trading <Link>Eloquent Javascript</Link>
+            You have proposed <Link>Arshad Khan</Link> for trading{" "}
+            <Link>Eloquent Javascript</Link>
           </h4>
         </div>
         <div className="tradeBtnWrapper lower">

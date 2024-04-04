@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
-import './styles.sass';
+import "./styles.sass";
 
 class AddItemPage extends Component {
   constructor(props) {
@@ -22,7 +22,12 @@ class AddItemPage extends Component {
 
   render() {
     return (
-      <div className="addItemWrapper" ref={node => { this.modalWrapper = node; }}>
+      <div
+        className="addItemWrapper"
+        ref={(node) => {
+          this.modalWrapper = node;
+        }}
+      >
         <div className="hider" />
         <div className="modal">
           <div className="heading">
@@ -36,31 +41,66 @@ class AddItemPage extends Component {
             <div className="itemInfoWrapper">
               <div className="inputWrapper">
                 <label htmlFor="itemName">Name:</label>
-                <input id="itemName" name="itemName" type="text" className="itemName" placeholder="Enter Name" required />
+                <input
+                  id="itemName"
+                  name="itemName"
+                  type="text"
+                  className="itemName"
+                  placeholder="Enter Name"
+                  required
+                />
               </div>
               <div className="priceWrapper">
                 <div className="inputWrapper">
                   <label htmlFor="itemPrice">Price:</label>
-                  <input min="0" id="itemPrice" name="itemPrice" type="number" className="itemPrice" placeholder="Enter Price" required />
+                  <input
+                    min="0"
+                    id="itemPrice"
+                    name="itemPrice"
+                    type="number"
+                    className="itemPrice"
+                    placeholder="Enter Price"
+                    required
+                  />
                 </div>
                 <div className="inputWrapper">
                   <label htmlFor="itemCurrency">Currency:</label>
-                  <input id="itemCurrency" name="itemCurrency" type="text" className="itemCurrency" placeholder="Enter Currency" />
+                  <input
+                    id="itemCurrency"
+                    name="itemCurrency"
+                    type="text"
+                    className="itemCurrency"
+                    placeholder="Enter Currency"
+                  />
                 </div>
               </div>
               <div className="inputWrapper">
                 <label htmlFor="itemDescription">Description:</label>
-                <textarea name="itemDescription" id="itemDescription" className="itemDescription" placeholder="Enter Item Description" />
+                <textarea
+                  name="itemDescription"
+                  id="itemDescription"
+                  className="itemDescription"
+                  placeholder="Enter Item Description"
+                />
               </div>
               <div className="inputWrapper">
                 <label htmlFor="itemTags">Tags(Comma Separated):</label>
-                <textarea name="itemTags" id="itemTags" className="itemTags" placeholder="Enter Tags" />
+                <textarea
+                  name="itemTags"
+                  id="itemTags"
+                  className="itemTags"
+                  placeholder="Enter Tags"
+                />
               </div>
             </div>
           </div>
           <div className="buttonWrapper">
-            <button className="saveItemBtn" onClick={this.close.bind(this)}>Save</button>
-            <button className="cancelItemBtn" onClick={this.close.bind(this)}>Cancel</button>
+            <button className="saveItemBtn" onClick={this.close.bind(this)}>
+              Save
+            </button>
+            <button className="cancelItemBtn" onClick={this.close.bind(this)}>
+              Cancel
+            </button>
           </div>
         </div>
       </div>
@@ -70,7 +110,7 @@ class AddItemPage extends Component {
 
 AddItemPage.propTypes = {
   close: PropTypes.func,
-  openClass: PropTypes.string
+  openClass: PropTypes.string,
 };
 
 export default AddItemPage;

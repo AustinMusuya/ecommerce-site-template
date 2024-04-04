@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import {Link} from 'react-router';
-import { browserHistory } from 'react-router';
+import { browserHistory } from "react-router";
 
-import './styles.sass';
+import "./styles.sass";
 
 class Item extends Component {
   render() {
-    return(
+    return (
       <div className="item">
-        <div className="content" onClick={()=>{
-          browserHistory.push('/item/123');
-        }} />
+        <div
+          className="content"
+          onClick={() => {
+            browserHistory.push("/item/123");
+          }}
+        />
       </div>
     );
   }
